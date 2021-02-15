@@ -13,57 +13,127 @@
 </head>
 <body id="page-study">
     <div id="container">
-        <header class="page-header">
+        <header id="page-header">
             <div class="top-bar-container">
                 <a href="/">
                     <img src="/images/icons/back.svg" alt="Voltar">
                 </a>
-                <img src="images/logo.svg" alt="Logo">
+                <img class="logo-top-bar" src="images/logo.svg" alt="Logo">
             </div>
 
             <div class="header-content">
                 <strong>Esses são os proffys disponíveis</strong>
                 <form id="search-teachers">
-                        <div class="select-block">
-                           <label for="subject">Matéria</label>
-                           <select name="subject" id="subject">
-                               <option value="" disabled="" >Selecione uma opção</option>
-                               <option value="1">Artes</option>
-                               <option value="2">Biologia</option>
-                               <option value="3">Ciências</option>
-                               <option value="4">Educação física</option>
-                               <option value="5">Física</option>
-                               <option value="6">Geografia</option>
-                               <option value="7">História</option>
-                               <option value="8">Matemática</option>
-                               <option value="9">Português</option>
-                               <option value="10">Química</option>
-                           </select>
-                        </div>
-
-                        <div class="select-block">
-                            <label for="subject">Dia da semana</label>
-                            <select name="weekday" id="weekday">
-                                <option value="" disabled="" >Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-feira</option>
-                                <option value="2">Terça-feira</option>
-                                <option value="3">Quarta-feira física</option>
-                                <option value="4">Quinta-feira</option>
-                                <option value="5">Sexta-feira</option>
-                                <option value="6">Sá bado</option>
-                            </select>
-                        </div>
-                        
-                        <div class="input-block">
-                            <label for="time">Hora (De 0 até 24)</label>
-                            <input type="time" name="time" id="time" value="00:00">
-                        </div>
+                            <div class="select-block">
+                               <label for="subject">Matéria</label>
+                               <select name="subject" id="subject">
+                                   <option value="" disabled="" >Selecione uma opção</option>
+                                   <option value="1">Artes</option>
+                                   <option value="2">Biologia</option>
+                                   <option value="3">Ciências</option>
+                                   <option value="4">Educação física</option>
+                                   <option value="5">Física</option>
+                                   <option value="6">Geografia</option>
+                                   <option value="7">História</option>
+                                   <option value="8">Matemática</option>
+                                   <option value="9">Português</option>
+                                   <option value="10">Química</option>
+                               </select>
+                            </div>
+                            <div class="select-block">
+                                <label for="subject">Dia da semana</label>
+                                <select name="weekday" id="weekday">
+                                    <option value="" disabled="" >Selecione uma opção</option>
+                                    <option value="0">Domingo</option>
+                                    <option value="1">Segunda-feira</option>
+                                    <option value="2">Terça-feira</option>
+                                    <option value="3">Quarta-feira física</option>
+                                    <option value="4">Quinta-feira</option>
+                                    <option value="5">Sexta-feira</option>
+                                    <option value="6">Sá bado</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-block">
+                                <label for="time">Hora (De 0 até 24)</label>
+                                <input type="time" name="time" id="time" value="00:00">
+                            </div>
                         
                         <button type="submit">Filtrar</button>
                 </form>
             </div>
         </header>
+
+        <main id="main-content">
+            <article class="proffy">
+                <header class="top-proffy">
+                    <img src="images/profile-proffy1.svg" alt="Imagem Profile">
+                    <div class="text-top-proffy">
+                        <strong>Diego Fernandes</strong>
+                        <span class="materialbl">Química</span>
+                    </div>
+                </header>
+                <div class="content-proffy">
+                    <p>Entusiasta das melhores tecnologias de química avançada.</p>
+                    <p>Apaixonado por explodir coisas em laborátorios e por mudar a vida das pessoas através de experências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+                </div>
+                <footer class="footer-proffy">
+                    <div class="text-container">
+                        <p>Preço/hora <span>R$ 20,00</span></p>
+                    </div>
+                    <button class="button-container">
+                        <img src="images/icons/cotato-icon.svg" alt="Icone contato">
+                        <p>Entrar em contato</p>
+                    </button>
+                </footer>
+            </article>
+
+            <article class="proffy">
+                <header class="top-proffy">
+                    <img src="images/profile-proffy1.svg" alt="Imagem Profile">
+                    <div class="text-top-proffy">
+                        <strong>Diego Fernandes</strong>
+                        <span class="materialbl">Química</span>
+                    </div>
+                </header>
+                <div class="content-proffy">
+                    <p>Entusiasta das melhores tecnologias de química avançada.</p>
+                    <p>Apaixonado por explodir coisas em laborátorios e por mudar a vida das pessoas através de experências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+                </div>
+                <footer class="footer-proffy">
+                    <div class="text-container">
+                        <p>Preço/hora <span>R$ 20,00</span></p>
+                    </div>
+                    <button class="button-container">
+                        <img src="images/icons/cotato-icon.svg" alt="Icone contato">
+                        <p>Entrar em contato</p>
+                    </button>
+                </footer>
+            </article>
+
+            <article class="proffy">
+                <header class="top-proffy">
+                    <img src="images/profile-proffy1.svg" alt="Imagem Profile">
+                    <div class="text-top-proffy">
+                        <strong>Diego Fernandes</strong>
+                        <span class="materialbl">Química</span>
+                    </div>
+                </header>
+                <div class="content-proffy">
+                    <p>Entusiasta das melhores tecnologias de química avançada.</p>
+                    <p>Apaixonado por explodir coisas em laborátorios e por mudar a vida das pessoas através de experências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+                </div>
+                <footer class="footer-proffy">
+                    <div class="text-container">
+                        <p>Preço/hora <span>R$ 20,00</span></p>
+                    </div>
+                    <button class="button-container">
+                        <img src="images/icons/cotato-icon.svg" alt="Icone contato">
+                        <p>Entrar em contato</p>
+                    </button>
+                </footer>
+            </article>
+        </main>
     </div>
 </body>
 </html>

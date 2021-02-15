@@ -41,6 +41,7 @@ body {
 
 body,
 input,
+select,
 button,
 textarea {
     font: 500 1.6rem Poppins;

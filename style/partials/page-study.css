@@ -166,10 +166,7 @@
     padding: 2rem;
 }
 
-.footer-proffy .text-container {
-    display: flex;
-    align-items: center;
-    text-align: center;
+ .text-container p {
     font-size: 1.3rem;
 }
 
@@ -219,7 +216,7 @@
     }
 
     #page-header .top-bar-container {
-        width: 1100px;
+        max-width: 1100px;
     }
 
     #page-header .header-content {
@@ -248,6 +245,9 @@
     #search-teachers .select-block{
         margin-bottom: 0;
     }
+    #search-teachers button {
+        /* margin-top: 2.6rem */
+    }
 
     #main-content {
         padding: 32px 0;
@@ -260,12 +260,30 @@
         padding: 32px;
     }
 
+    .content-proffy {
+        padding: 0px 0px 32px;
+    }
+
+    .content-proffy p {
+        padding: 0 32px;
+    }
+
+    .footer-proffy {
+        font-size: 1.6rem;
+    }
+
+    .text-container p {
+        display: flex;
+        align-items: center;
+    }
+
     .text-container span {
-        display: inline;
-        margin-left: 8px;
+        display: initial;
+        margin-left: 16px;
+        font-size: 1.4em;
     }
 
     .footer-proffy .button-container {
-        width: 270px;
+        max-width: 230px;
     }
 }

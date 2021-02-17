@@ -1,16 +1,23 @@
 .input-block,
-.select-block {
+.select-block,
+.textarea-block {
     position: relative;
 }
 
+.textarea-block {
+
+}
+
 .select-block label,
-.input-block label {
+.input-block label,
+.textarea-block label {
     font-size: 1.4rem;
     color: var(--color-text-complement);
 }
 
 .input-block input,
-.select-block select {
+.select-block select,
+.textarea-block textarea {
     width: 100%;
     height: 5.6rem;
     margin-top: .8rem;
@@ -22,6 +29,13 @@
     font: 1.6rem Archivo;
 }
 
+fieldset .textarea-block textarea {
+    height: 16rem;
+    padding: 1.2rem 1.6rem;
+
+    resize: vertical;
+}
+
 .input-block:focus-within::after,
 .select-block:focus-within::after {
     content: "";
@@ -30,6 +44,17 @@
     background: var(--color-primary-light);
     position: absolute;
     left: 1.6rem;
-    bottom: 0px;
+    bottom: -1px;
+    border-radius: 1rem;
+}
+
+.textarea-block:focus-within::after {
+    content: "";
+    width: calc(100% - 3.2rem);
+    height: 3px;
+    background: var(--color-primary-light);
+    position: absolute;
+    left: 1.6rem;
+    bottom: -1px;
     border-radius: 1rem;
 }

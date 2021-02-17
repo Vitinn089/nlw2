@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap">
 
     <title>Study</title>
+
+    <script src="scripts/addField.js" defer></script>
 </head>
 <body id="page-give-classes">
     <div id="container">
@@ -30,21 +32,21 @@
         </header>
 
         <main id="main-content">
-            <form action="" id="data-proffy">
-                <fieldset class="your-data">
+            <form action="" id="create-class">
+                <fieldset>
                     <Legend>Seus dados</Legend>
 
                     <div class="input-block">
                         <label for="name">Nome Completo</label>
-                        <input name="name" type="text">
+                        <input name="name" type="text" required>
                     </div>
                     <div class="input-block">
-                    	<label for="avatar">Link da suafoto <span>(comece com //http)</span></label>
+                    	<label for="avatar">Link da sua foto <small>(comece com http://)</small></label>
                     	<input name="avatar" type="text">
                     </div>
                     <div class="input-block">
-                        <label for="whatsapp">Whatsapp <span>(somente números)</span></label>
-                        <input name="whatsapp" type="text">
+                        <label for="whatsapp">Whatsapp <small>(use somente números)</small></label>
+                        <input name="whatsapp" type="text" required>
                     </div>
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
@@ -52,46 +54,125 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="data-class">
+                <fieldset>
                     <Legend>Sobre a aula</Legend>
 
                     <div class="select-block">
                         <label for="select-materia">Matéria</label>
-                        <select name="select-materia" id="select-materia">
+                        <select name="select-materia" id="select-materia" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="1">Artes</option>
+                            <option value="2">Biologia</option>
+                            <option value="3">Ciências</option>
+                            <option value="4">Educação física</option>
+                            <option value="5">Física</option>
+                            <option value="6">Geografia</option>
+                            <option value="7">História</option>
+                            <option value="8">Matemática</option>
+                            <option value="9">Português</option>
+                            <option value="10">Química</option>
                         </select>
                     </div>
                     <div class="input-block">
-                        <label for="input-preco">Csuto da sua hora por aula (em R$)</label>
-                        <input name="input-preco" type="text">
+                        <label for="input-preco">Custo da sua hora por aula <small>(em R$)</small></label>
+                        <input name="input-preco" type="cost" required>
                     </div>
                 </fieldset>
 
-                <fieldset class="data-times">
-                    <Legend>Horários disponíveis</Legend>
+                <fieldset id="schedule-items">
+                    <Legend>Horários disponíveis <button type="button" id="add-time-button">+ Novo Horário</button> </Legend>
                     
-                    <div class="select-block">
-                        <label for="select-week">Dia da semana</label>
-                        <select name="select-week" id="select-wee">
-                            <option value="" disabled="disabled">Selecione uma opção</option>
-                            <option value="1">Domingo</option>
-                            <option value="2">Segunda-feira</option>
-                            <option value="3">Terça-feira</option>
-                            <option value="4">Quarta-feira</option>
-                            <option value="5">Quinta-feira</option>
-                            <option value="6">Sexta-feira</option>
-                            <option value="7">Sábado</option>
-                        </select>
+                    <div class="schedule-item">
+                        <div class="select-block">
+                            <label for="select-week">Dia da semana</label>
+                            <select name="select-week[]" required>
+                                <option value="" disabled="disabled">Selecione uma opção</option>
+                                <option value="1">Domingo</option>
+                                <option value="2">Segunda-feira</option>
+                                <option value="3">Terça-feira</option>
+                                <option value="4">Quarta-feira</option>
+                                <option value="5">Quinta-feira</option>
+                                <option value="6">Sexta-feira</option>
+                                <option value="7">Sábado</option>
+                            </select>
+                        </div>
+
+                        <div class="input-block" id="block1">
+                            <label for="time-from">Das:</label>
+                            <input name="time-from[]" type="time" value="00:00" required>
+                        </div>
+
+                        <div class="input-block" id="block2">
+                            <label for="time-to">Até:</label>
+                            <input name="time-to[]" type="time" value="00:00" required>
+                        </div>
                     </div>
-                    <div class="input-block">
-                        <label for="input-hour">Das</label>
-                        <input name="input-from-hour" type="number">
+
+                    <div class="schedule-item">
+                        <div class="select-block">
+                            <label for="select-week">Dia da semana</label>
+                            <select name="select-week[]" required>
+                                <option value="" disabled="disabled">Selecione uma opção</option>
+                                <option value="1">Domingo</option>
+                                <option value="2">Segunda-feira</option>
+                                <option value="3">Terça-feira</option>
+                                <option value="4">Quarta-feira</option>
+                                <option value="5">Quinta-feira</option>
+                                <option value="6">Sexta-feira</option>
+                                <option value="7">Sábado</option>
+                            </select>
+                        </div>
+
+                        <div class="input-block" id="block1">
+                            <label for="time-from">Das:</label>
+                            <input name="time-from[]" type="time" value="00:00" required>
+                        </div>
+
+                        <div class="input-block" id="block2">
+                            <label for="time-to">Até:</label>
+                            <input name="time-to[]" type="time" value="00:00" required>
+                        </div>
                     </div>
-                    <div class="input-block">
-                        <label for="input-to-hour">Até</label>
-                        <input name="input-to-hour" type="number">
+
+                    <div class="schedule-item">
+                        <div class="select-block">
+                            <label for="select-week">Dia da semana</label>
+                            <select name="select-week[]" required>
+                                <option value="" disabled="disabled">Selecione uma opção</option>
+                                <option value="1">Domingo</option>
+                                <option value="2">Segunda-feira</option>
+                                <option value="3">Terça-feira</option>
+                                <option value="4">Quarta-feira</option>
+                                <option value="5">Quinta-feira</option>
+                                <option value="6">Sexta-feira</option>
+                                <option value="7">Sábado</option>
+                            </select>
+                        </div>
+
+                        <div class="input-block" id="block1">
+                            <label for="time-from">Das:</label>
+                            <input name="time-from[]" type="time" value="00:00" required>
+                        </div>
+
+                        <div class="input-block" id="block2">
+                            <label for="time-to">Até:</label>
+                            <input name="time-to[]" type="time" value="00:00" required>
+                        </div>
                     </div>
                 </fieldset>
+
             </form>
+            <footer>
+                <div class="text-footer">
+                    <img src="images/icons/warning.svg" alt="Atenção">
+                    <p>
+                        importante! <br> 
+                        Preencha todos os dados
+                    </p>
+                </div>
+    
+                <button form="create-class" type="submit" id="submit-button">Salvar cadastro</button>
+            </footer>
         </main>
     </div>
 </body>

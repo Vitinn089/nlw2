@@ -1,0 +1,186 @@
+#page-study #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#search-teachers {
+    margin-top: 3.2rem;
+}
+
+#search-teachers label {
+    color: var(--color-text-in-primary);
+}
+
+#search-teachers .select-block {
+    margin-bottom: 1.4rem;
+}
+
+#search-teachers button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-top: 3.2rem;
+}
+
+#search-teachers button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+#main-content{
+    width: 90%;
+    margin: 3.2rem auto;
+}
+
+.proffy {
+    background: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+}
+
+ .proffy .top-proffy {
+    display: flex;
+    align-items: center;
+}
+
+.proffy .top-proffy img {
+    margin-right: 2rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.proffy .top-proffy strong {
+    display: block;
+    font-family: Archivo;
+    color: var(--color-text-title);
+}
+
+.content-proffy {
+    text-align: left;
+}
+
+.top-proffy,
+.content-proffy {
+    padding: 2rem;
+}
+
+.content-proffy p:first-child {
+    padding-bottom: 1.5rem;
+}
+
+.footer-proffy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-line-in-white);
+    background: var(--color-box-footer);
+    padding: 2rem;
+}
+
+ .text-container p {
+    font-size: 1.3rem;
+}
+
+.footer-proffy span {
+    color: var(--color-primary);
+    font: 700 1.7rem Poppins;
+    display: block;
+}
+
+.button {
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color-secondary);
+    color: var(--color-button-text);
+    width: calc((100% / 2));
+    height: 5.6rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--color-line-in-white);
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 1.3rem;
+}
+
+.footer-proffy .button:hover {
+    background: var(--color-secondary-dark);
+    cursor: pointer;
+}
+
+.button img {
+    padding-right: 1rem;
+}
+
+.proffy + .proffy {
+    margin-top: 2.3rem;
+}
+
+@media (min-width: 761px) {
+    #page-study #container {
+        max-width: 100vw;
+    }
+    
+    #search-teachers {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 13px;
+        position: absolute;
+        bottom: -28px;
+    }
+
+    #search-teachers .select-block{
+        margin-bottom: 0;
+    }
+    #search-teachers button {
+        /* margin-top: 2.6rem */
+    }
+
+    #main-content {
+        padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+    
+    .top-proffy,
+    .footer-proffy {
+        padding: 32px;
+    }
+
+    .content-proffy {
+        padding: 0px 0px 32px;
+    }
+
+    .content-proffy p {
+        padding: 0 32px;
+    }
+
+    .footer-proffy {
+        font-size: 1.6rem;
+    }
+
+    .text-container p {
+        display: flex;
+        align-items: center;
+    }
+
+    .text-container span {
+        display: initial;
+        margin-left: 16px;
+        font-size: 1.4em;
+    }
+
+    .footer-proffy .button {
+        max-width: 230px;
+    }
+}

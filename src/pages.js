@@ -17,7 +17,7 @@ async function pageStudy(req, res) {
     // converter horas e minutos
 
     const timeToMinutes = convertHoursToMinutes(filters.time)
-    console.log(timeToMinutes)
+    // console.log(timeToMinutes)
 
     const query = `
         SELECT classes.*, proffys.*
@@ -33,13 +33,13 @@ async function pageStudy(req, res) {
         )
         AND classes.subject = '${filters.subject}'
     `
-    console.log(filters)
+    // console.log(filters)
 
     // caso hava erro na hora da consulta do banco de dados.
     try {
         const db = await Database
         const proffys = await db.all(query)
-        console.log(proffys)
+        // console.log(proffys)
 
         proffys.map((proffy) => {
             proffy.subject = getSubject(proffy.subject)
@@ -72,8 +72,8 @@ async function saveClasses(req, res) {
     }
 
     const classScheduleValues = req.body.weekday.map((weekday, index) => {
-        console.log(req.body.time_from)
-        console.log(req.body.time_to)
+        // console.log(req.body.time_from)
+        // console.log(req.body.time_to)
         return {
             weekday,
             time_from: convertHoursToMinutes(req.body.time_from[index]), 

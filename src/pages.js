@@ -45,7 +45,7 @@ async function pageStudy(req, res) {
             proffy.subject = getSubject(proffy.subject)
         })
 
-        return res.render ('study.html', { proffys, subjects, filters, weeks})
+        return res.render ('study.html', { proffys, subjects, filters, weeks })
     } catch (error) {
         console.log(error)
     }
@@ -54,6 +54,11 @@ async function pageStudy(req, res) {
 function pageGiveClasses(req, res) {
     
     return res.render("give-classes.html" , { subjects, weeks })
+}
+
+
+function sucessProffy(req, res) {
+    return res.render("sucess-proffy.html")
 }
 
 async function saveClasses(req, res) {
@@ -89,7 +94,8 @@ async function saveClasses(req, res) {
         queryString += "&weekday=" + req.body.weekday[0]
         queryString += "&time=" + req.body.time_from[0]
 
-        return res.redirect("/study" + queryString)
+        // return res.redirect("/study" + queryString)
+        return res.redirect("/sucess-proffy" + queryString )
 
     } catch (error) {
         console.log(error)
@@ -102,5 +108,6 @@ module.exports =  {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveClasses
+    saveClasses,
+    sucessProffy
 }

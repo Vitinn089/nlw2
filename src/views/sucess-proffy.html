@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/partials/saved-registration.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap">
+
+    <style>
+        body {
+            background-image: url("images/success-background.svg");
+        }
+    </style>
+
+    <title>Cadastro Salvo!</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/icons/success-check-icon.svg" alt="Caixa marcada">
+        <h1>Cadastro salvo!</h1>
+        <p>Tudo certo, seu cadastro está na nossa lista de professores. <br>Agora é só ficar de olho no seu WhatsApp.</p>
+        <a href="" class="button">Acessar lista</a>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            location.href = `/study${window.location.search}`
+        }, 2000)
+    </script>
+</body>
+</html>

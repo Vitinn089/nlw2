@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 #page-header {
     background-color: var(--color-primary);
     display: flex;

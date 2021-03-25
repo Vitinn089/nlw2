@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style/partials/give-classes.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap">
 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/ico">
+
     <title>Study</title>
 
     <script src="scripts/addField.js" defer></script>
@@ -76,25 +78,27 @@
                     <Legend>Horários disponíveis <button type="button" id="add-time-button">+ Novo Horário</button> </Legend>
                     
                     <div class="schedule-item">
-                        <div class="select-block">
+                        <div class="select-block week">
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]" required>
                                 <option value="" disabled="disabled">Selecione uma opção</option>
                                 {%for week in weeks %}
                                     <option value="{{loop.index0}}">{{week}}</option>
                                 {%endfor%}
-                        </select>
+                            </select>
                         </div>
 
-                        <div class="input-block" id="block1">
-                            <label for="time_from">Das:</label>
+                        <div class="input-block from">
+                            <label for="time_from">Das</label>
                             <input name="time_from[]" type="time" value="00:00" required>
                         </div>
 
-                        <div class="input-block" id="block2">
-                            <label for="time_to">Até:</label>
+                        <div class="input-block to">
+                            <label for="time_to">Até</label>
                             <input name="time_to[]" type="time" value="00:00" required>
                         </div>
+
+                        <button class="trash-button" type="button">X</button>
                     </div>
                 </fieldset>
             </form>
@@ -102,7 +106,7 @@
                 <div class="text-footer">
                     <img src="images/icons/warning.svg" alt="Atenção">
                     <p>
-                        importante! <br> 
+                        Importante! <br> 
                         Preencha todos os dados
                     </p>
                 </div>

@@ -2,7 +2,7 @@
 
 #page-give-classes #container {
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
 }
 
 #main-content {
@@ -13,8 +13,8 @@
 #create-class {
     width: 100%;
     max-width: 74rem;
-    margin: 0 auto; 
-    padding: 3.2rem;
+    margin: 0 auto;
+    padding: 3.2rem 3.2rem 0;
 }
 
 fieldset {
@@ -69,10 +69,50 @@ small {
     color: var(--color-primary-dark);
 }
 
+/* .schedule-item {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .grid-container */
 .schedule-item {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    grid-template-columns: 3fr 3fr 1fr;
+    grid-template-areas:
+    "week week trash"
+    "from to trash";
     gap: 1rem;
+}
+
+.week {
+    grid-area: week;
+}
+
+.from {
+    grid-area: from;
+}
+
+.to {
+    grid-area: to;
+}
+
+.trash-button {
+    grid-area: trash;
+    outline: none;
+    border: none;
+    border-radius: .8em;
+    background-color: var(--color-trash-button);
+    color: var(--color-button-text);
+    height: 3em;
+    width: 3em;
+    align-self: center;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.trash-button:hover {
+    background-color: var(--color-trash-button-dark);
 }
 
 /* footer */
@@ -130,7 +170,7 @@ button:hover {
     #page-header .header-content {
         width: 100%;
     }
-    
+
     #create-class {
         padding: 50px 50px 0;
     }

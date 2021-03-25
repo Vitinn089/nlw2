@@ -20,6 +20,8 @@
     --color-box-base: #ffffff;
     --color-box-footer: #fafafc;
     --color-small-info: #c1bccc;
+    --color-trash-button: #e33d3d;
+    --color-trash-button-dark: #c23737;
     font-size: 60%;
 }
 

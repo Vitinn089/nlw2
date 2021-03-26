@@ -8,8 +8,16 @@ function cloneField() {
     // Duplicar  os campos
     const newFieldsContainer = document.querySelector('.schedule-item').cloneNode(true)
 
+    const trash = '<button class="trash-button" type="button">X</button>'
+
+
+    newFieldsContainer.firstElementChild.innerHTML += trash
+    
+
+    console.log(newFieldsContainer)
     // limpar os campos.
     const fields = newFieldsContainer.querySelectorAll('input')
+
 
     //para cada campo, limpar
     fields.forEach(function(field) {

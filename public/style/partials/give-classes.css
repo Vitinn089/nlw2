@@ -69,44 +69,23 @@ small {
     color: var(--color-primary-dark);
 }
 
-/* .schedule-item {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .grid-container */
-.schedule-item {
+.grid-container {
     display: grid;
-    /* grid-template-columns: 2fr 1fr 1fr; */
-    grid-template-columns: 3fr 3fr 1fr;
-    grid-template-areas:
-    "week week trash"
-    "from to trash";
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 1rem;
 }
 
-.week {
-    grid-area: week;
-}
-
-.from {
-    grid-area: from;
-}
-
-.to {
-    grid-area: to;
-}
-
 .trash-button {
-    grid-area: trash;
+    margin-top: 1em;
     outline: none;
     border: none;
     border-radius: .8em;
     background-color: var(--color-trash-button);
     color: var(--color-button-text);
-    height: 3em;
-    width: 3em;
-    align-self: center;
+    height: 5.6rem;
+    width: 100%;
+    align-self: end;
+    justify-self: right;
     transition: background 0.2s;
     cursor: pointer;
 }
@@ -154,7 +133,7 @@ footer {
     transition: background 0.2s;
 }
 
-button:hover {
+#submit-button:hover {
     background-color: var(--color-secondary-dark);
 }
 
@@ -167,7 +146,7 @@ button:hover {
         margin-bottom: 0;
     }
 
-    #page-header .header-content {
+    #page-header, .header-content {
         width: 100%;
     }
 
@@ -180,9 +159,14 @@ button:hover {
         margin: -50px auto 50px;
     }
 
-    footer button {
-        max-width: 250px;
+    .grid-container-desktop {
+        display: grid;
+        grid-template-columns: 3fr 0.25fr;
+        gap: 1rem;
     }
 
+    .trash-button {
+        width: 56px;
+    }
 }
 

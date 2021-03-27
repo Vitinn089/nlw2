@@ -6,8 +6,9 @@
     position: relative;
 }
 
-.textarea-block {
-
+.required {
+    color: var(--color-trash-button);
+    margin-left: 2px;
 }
 
 .select-block label,

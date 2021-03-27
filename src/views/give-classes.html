@@ -16,6 +16,7 @@
     <title>Study</title>
 
     <script src="scripts/addField.js" defer></script>
+    <script src="scripts/deleteField.js" defer></script>
 </head>
 <body id="page-give-classes">
     <div id="container">
@@ -39,19 +40,19 @@
                     <Legend>Seus dados</Legend>
 
                     <div class="input-block">
-                        <label for="name">Nome Completo</label>
+                        <label for="name">Nome Completo <span class="required">*</span></label>
                         <input name="name" type="text" required>
                     </div>
                     <div class="input-block">
-                    	<label for="avatar">Link da sua foto <small>(comece com http://)</small></label>
+                    	<label for="avatar">Link da sua foto <small>(comece com http://)</small> <span class="required">*</span></label>
                     	<input name="avatar" type="text">
                     </div>
                     <div class="input-block">
-                        <label for="whatsapp">Whatsapp <small>(use somente números)</small></label>
+                        <label for="whatsapp">Whatsapp <small>(use somente números)</small> <span class="required">*</span></label>
                         <input name="whatsapp" type="text" required>
                     </div>
                     <div class="textarea-block">
-                        <label for="bio">Biografia</label>
+                        <label for="bio">Biografia <span class="required">*</span></label>
                         <textarea name="bio" id="bio"></textarea>
                     </div>
                 </fieldset>
@@ -60,7 +61,7 @@
                     <Legend>Sobre a aula</Legend>
 
                     <div class="select-block">
-                        <label for="subject">Matéria</label>
+                        <label for="subject">Matéria <span class="required">*</span></label>
                         <select name="subject" id="select-materia" required>
                             <option value="">Selecione uma opção</option>
                             {%for subject in subjects %}
@@ -69,7 +70,7 @@
                         </select>
                     </div>
                     <div class="input-block">
-                        <label for="cost">Custo da sua hora por aula <small>(em R$)</small></label>
+                        <label for="cost">Custo da sua hora por aula <small>(em R$)</small> <span class="required">*</span></label>
                         <input name="cost" type="cost" required>
                     </div>
                 </fieldset>
@@ -81,7 +82,7 @@
                         <div class="grid-container-desktop">
                             <div class="grid-container">
                                 <div class="select-block week">
-                                    <label for="weekday">Dia da semana</label>
+                                    <label for="weekday">Dia da semana <span class="required">*</span></label>
                                     <select name="weekday[]" required>
                                         <option value="" disabled="disabled">Selecione uma opção</option>
                                         {%for week in weeks %}
@@ -90,11 +91,11 @@
                                     </select>
                                 </div>
                                 <div class="input-block from">
-                                    <label for="time_from">Das</label>
+                                    <label for="time_from">Das <span class="required">*</span></label>
                                     <input name="time_from[]" type="time" value="00:00" required>
                                 </div>
                                 <div class="input-block to">
-                                    <label for="time_to">Até</label>
+                                    <label for="time_to">Até <span class="required">*</span></label>
                                     <input name="time_to[]" type="time" value="00:00" required>
                                 </div>
                             </div>

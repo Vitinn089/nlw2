@@ -8,10 +8,29 @@ function pageLanding(req, res) {
 
 async function pageStudy(req, res) {
     const filters = req.query
+    
+    const queryAllProffys = `
+        SELECT classes.*, proffys.*
+        FROM proffys
+        JOIN classes ON (classes.proffy_id = proffys.id)
+        ORDER BY proffys.name asc
+    `
 
     if (!filters.subject || !filters.weekday || !filters.time) {
-        // console.log('campos vazios')
-        return res.render("study.html", { filters, subjects, weeks })
+        
+        try {
+            const db = await Database
+
+            const proffys = await db.all(queryAllProffys)
+    
+            proffys.map((proffy) => {
+                proffy.subject = getSubject(proffy.subject)
+            })
+    
+            return res.render("study.html", { proffys, filters, subjects, weeks })   
+        } catch (error) {
+            console.log(error)
+        }
     }
     
     // converter horas e minutos
@@ -33,13 +52,11 @@ async function pageStudy(req, res) {
         )
         AND classes.subject = '${filters.subject}'
     `
-    // console.log(filters)
 
     // caso hava erro na hora da consulta do banco de dados.
     try {
         const db = await Database
         const proffys = await db.all(query)
-        // console.log(proffys)
 
         proffys.map((proffy) => {
             proffy.subject = getSubject(proffy.subject)
